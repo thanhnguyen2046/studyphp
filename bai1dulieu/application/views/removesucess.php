@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="container">
-	<h1 class="text-xs-center">insert data success</h1>
+	<h1 class="text-xs-center">remove data success</h1>
 	<div class="row">
 		<div class="col-xs-6">
 			<a href="<?php echo base_url() ?>index.php/addData_controller" class="btn btn-info btn-lg">

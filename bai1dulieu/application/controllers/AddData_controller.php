@@ -17,17 +17,18 @@ class AddData_controller extends CI_Controller
 	}
 
 	//insert
-	public function insertData_controller(){
+	public function insertData_controller()
+	{
 		//lay du lieu ve
 		$phoneNumber = $this->input->post('number');
-		$price =  $this->input->post('price');
+		$price = $this->input->post('price');
 
 		//truyen du lieu vao model
 		$this->load->model('addData_model');
-		if($this->addData_model->insert($phoneNumber,$price)){
+		if ($this->addData_model->insert($phoneNumber, $price)) {
 			//echo "insert db sucess";
 			$this->load->view('thanhcong');
-		}else{
+		} else {
 			echo "insert db fail";
 		}
 	}

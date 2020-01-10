@@ -17,21 +17,24 @@
 <body>
 <?php include('header.php'); ?>
 <div class="container">
-	<h2 class="text-center mt-2 mb-3">add new Phone Number</h2>
+	<h2 class="text-center mt-2 mb-3">Edit Phone Number</h2>
 	<div class="row">
 		<div class="col-sm-8">
-			<form action="AddData_controller/insertData_controller" method="post" enctype="multipart/form-data">
+			<form action="../updateData" method="post" enctype="multipart/form-data">
 				<div class="card">
 					<div class="card-block">
-						<div class="form-group">
-							<label for="exampleFormControlInput1">Phone Number</label>
-							<input type="text" class="form-control" name="number" placeholder="19008198">
-						</div>
-						<div class="form-group">
-							<label for="exampleFormControlInput1">Price</label>
-							<input type="text" class="form-control" name="price" placeholder="2000000">
-						</div>
-						<input type="submit" class="btn btn-success btn-block" value="Add number">
+						<?php foreach ($resultarray as $key => $value) { ?>
+							<input type="hidden" class="form-control" name="id" placeholder="1" value="<?= $value['id'] ?>">
+							<div class="form-group">
+								<label for="exampleFormControlInput1">Phone Number</label>
+								<input type="text" class="form-control" name="number" placeholder="19008198" value="<?= $value['so'] ?>">
+							</div>
+							<div class="form-group">
+								<label for="exampleFormControlInput1">Price</label>
+								<input type="text" class="form-control" name="price" placeholder="2000000" value="<?= $value['gia'] ?>">
+							</div>
+							<input type="submit" class="btn btn-success btn-block" value="Save">
+						<?php } ?>
 					</div>
 				</div>
 			</form>
