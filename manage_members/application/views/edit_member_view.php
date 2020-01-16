@@ -25,7 +25,7 @@
 						<div class="text-xs-center mb-1">
 							<img src="<?= $value['avatar']; ?>" alt="">
 						</div>
-						<input type="hidden" name="id" value="<?= $value['id']; ?>">
+						<input type="hidden" name="id" id="id"  value="<?= $value['id']; ?>">
 						<input type="text" value="<?= $value['avatar']; ?>" class="form-control" name="avatarOld">
 						<input type="file" class="form-control" name="avatar" value="change image" placeholder="change image">
 					</div>
@@ -33,31 +33,31 @@
 				<div class="form-group row">
 					<label for="name" class="col-sm-3 col-form-label">Name</label>
 					<div class="col-sm-9">
-						<input type="text" class="form-control" name="name" value="<?= $value['name']; ?>" placeholder="member name">
+						<input type="text" class="form-control" name="name" id="name" value="<?= $value['name']; ?>" placeholder="member name">
 					</div>
 				</div>
 				<div class="form-group row">
 					<label for="age" class="col-sm-3 col-form-label">Age</label>
 					<div class="col-sm-9">
-						<input type="number" class="form-control" name="age" value="<?= $value['age']; ?>"placeholder="member Age">
+						<input type="number" class="form-control" name="age" id="age" value="<?= $value['age']; ?>"placeholder="member Age">
 					</div>
 				</div>
 				<div class="form-group row">
 					<label for="phone" class="col-sm-3 col-form-label">Phone Number</label>
 					<div class="col-sm-9">
-						<input type="text" class="form-control" name="phone" value="<?= $value['phone_number']; ?>"placeholder="0000000000000">
+						<input type="text" class="form-control" name="phone" id="phone" value="<?= $value['phone_number']; ?>"placeholder="0000000000000">
 					</div>
 				</div>
 				<div class="form-group row">
 					<label for="facebook" class="col-sm-3 col-form-label">Facebook</label>
 					<div class="col-sm-9">
-						<input type="text" class="form-control" name="facebook" value="<?= $value['facebook']; ?>" placeholder="facebook links">
+						<input type="text" class="form-control" name="facebook" id="facebook"value="<?= $value['facebook']; ?>" placeholder="facebook links">
 					</div>
 				</div>
 				<div class="form-group row">
 					<label for="order" class="col-sm-3 col-form-label">Order Number</label>
 					<div class="col-sm-9">
-						<input type="text" class="form-control" name="order" value="<?= $value['total_order']; ?>" placeholder="order number">
+						<input type="text" class="form-control" name="order" id="order" value="<?= $value['total_order']; ?>" placeholder="order number">
 					</div>
 				</div>
 				<?php } ?>

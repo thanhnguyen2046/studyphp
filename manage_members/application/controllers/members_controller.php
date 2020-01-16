@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+include 'UploadHandler.php';
 
 class members_controller extends CI_Controller
 {
@@ -174,7 +175,33 @@ class members_controller extends CI_Controller
 		}else{
 			echo "remove fail";
 		}
-
 	}
 
+	public function ajaxAdd()
+	{
+		//$avatar = base_url() . "Fileupload/" . basename($_FILES["avatar"]["name"]);
+		$avatar = $this->input->post('avatar');
+		$name = $this->input->post('name');
+		$age = $this->input->post('age');
+		$phone = $this->input->post('phone');
+		$facebook = $this->input->post('facebook');
+		$order = $this->input->post('order');
+
+		//goi model
+		$this->load->model('member_model');
+		$status = $this->member_model->insertMemberMysql($name, $age, $phone, $avatar, $facebook, $order);
+		if ($status) {
+			echo "insert sucess";
+		} else {
+			echo "insert fail";
+		}
+	}
+
+	public function uploadfile()
+	{
+		$uploadfile = new UploadHandler();
+	}
 }
+
+
+
