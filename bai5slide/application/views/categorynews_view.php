@@ -5,10 +5,16 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>News management</title>
-
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.js"
+	  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="<?= base_url() ?>vendor/bootstrap.js"></script>
+	<script type="text/javascript" src="<?= base_url() ?>1.js"></script>
 	<link rel="stylesheet" href="<?= base_url() ?>vendor/bootstrap.css">
 	<link rel="stylesheet" href="<?= base_url() ?>vendor/font-awesome.css">
 	<link rel="stylesheet" href="<?= base_url() ?>1.css">
+
 </head>
 <body>
 <div class="container">

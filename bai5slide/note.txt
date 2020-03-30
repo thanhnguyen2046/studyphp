@@ -1,0 +1,43 @@
+//session
+-them tung phan tu
+$this->session->set_userdata('suachua','Viet);
+-them nhieu phan tu
+$dataUser = array(
+	  'suachua'=> 'vinamilk',
+	  'suatuoi','THTRUEMILK'
+	);
+	$this->session->set_userdata($dataUser);
+//lay ve session
+<?= $this->session->userdata('suachua') ?>
+
+//kiem tra session
+$this->session->has_userdata('ten');
+
+
+
+<?php if($this->session->has_userdata('suachua') && ($this->session->userdata('suachua')=='vinamilk')){?>
+<div class="alert alert-success" role="alert">
+	<strong>Hello <?=$this->session->userdata('suachua') ?>!</strong> Login success!
+</div>
+
+<?php } ?>
+
+//xoa sesstion
+
+unset($_SESSION['ten'])
+unset_userdata('tent')
+
+$dataUser = array(
+	  'suachua' => 'vinamilk',
+	  'suatuoi' => 'THTRUEMILK'
+	);
+
+	$this->session->set_userdata($dataUser);
+	$arrayDataUserRemove = array('suachua','suatuoi');
+	$this->session->unset_userdata($arrayDataUserRemove);
+
+
+//trigger:
+BEGIN
+SET NEW.created_at = UNIX_TIMESTAMP();
+END
